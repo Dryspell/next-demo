@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -26,13 +27,12 @@ const Home: NextPage = () => {
                 </p>
 
                 <div className={styles.grid}>
-                    <a
-                        href="http://localhost:3000/api/ping"
-                        className={styles.card}
-                    >
-                        <h2>API Ping&rarr;</h2>
-                        <p>Ping the API</p>
-                    </a>
+                    <Link href="/api/ping">
+                        <a className={styles.card}>
+                            <h2>API Ping&rarr;</h2>
+                            <p>Ping the API</p>
+                        </a>
+                    </Link>
 
                     <a
                         href="http://flysuit.vercel.app/api/ping"
@@ -41,19 +41,18 @@ const Home: NextPage = () => {
                         <h2>Hosted Page &rarr;</h2>
                         <p>Check out the hosted page?</p>
                     </a>
-
-                    <a
-                        href="http://next-test-gold-delta.vercel.app/api/ping"
-                        className={styles.card}
-                    >
-                        <h2>Go To Mubeen&apos;s Page &rarr;</h2>
-                        <p>Look Mubeen Made this!</p>
-                    </a>
-
-                    <a href="https://www.google.com" className={styles.card}>
-                        <h2>Go to Google! &rarr;</h2>
-                        <p>This is a link to google</p>
-                    </a>
+                    <Link href="http://next-test-gold-delta.vercel.app/api/ping">
+                        <a className={styles.card}>
+                            <h2>Go To Mubeen&apos;s Page &rarr;</h2>
+                            <p>Look Mubeen Made this!</p>
+                        </a>
+                    </Link>
+                    <Link href="https://www.google.com">
+                        <a className={styles.card}>
+                            <h2>Go to Google! &rarr;</h2>
+                            <p>This is a link to google</p>
+                        </a>
+                    </Link>
                 </div>
             </main>
 
